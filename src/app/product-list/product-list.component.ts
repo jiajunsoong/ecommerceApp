@@ -8,7 +8,7 @@ import { Products } from '../products';
   styleUrls: ['./product-list.component.css']
 })
 export class ProductListComponent {
-  products: Products[] = [
+  productList: Products[] = [
     {
     id: 1,
     title: 'iPhone 9',
