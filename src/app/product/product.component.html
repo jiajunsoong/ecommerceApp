@@ -1,8 +1,10 @@
 <section>
   <img [src]="product.thumbnail" alt="Thumbnail of {{product.title}}">
-  <h3>{{product.title}}</h3>
-  <p>{{product.description}}</p>
-  <p>{{product.price}}</p>
-  <p>{{product.brand}}</p>
-  <a href="">Click to know more</a>
+  <ul>
+    <li><h3>{{product.title}}</h3></li>
+    <li>{{product.description}}</li>
+    <li>Brand: {{product.brand}}</li>
+    <li>Price: {{product.price}}</li>
+  </ul>
+  <a [routerLink]="['/details', product.id]">Learn more</a>
 </section>

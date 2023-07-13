@@ -16,7 +16,12 @@ export class ProductsService {
     stock: 94,
     brand: 'Apple',
     category: 'smartphones',
-    thumbnail: 'https://i.dummyjson.com/data/products/1/thumbnail.jpg'
+    thumbnail: 'https://i.dummyjson.com/data/products/1/thumbnail.jpg',
+    images: [
+      "https://i.dummyjson.com/data/products/1/1.jpg",
+      "https://i.dummyjson.com/data/products/1/2.jpg",
+      "https://i.dummyjson.com/data/products/1/3.jpg",
+      "https://i.dummyjson.com/data/products/1/4.jpg"]
   },{
     id:2,
     title:'iPhone X',
@@ -27,7 +32,10 @@ export class ProductsService {
     stock:34,
     brand:'Apple',
     category:'smartphones',
-    thumbnail:'https://i.dummyjson.com/data/products/2/thumbnail.jpg'
+    thumbnail:'https://i.dummyjson.com/data/products/2/thumbnail.jpg',
+    images: ["https://i.dummyjson.com/data/products/2/1.jpg",
+    "https://i.dummyjson.com/data/products/2/2.jpg",
+    "https://i.dummyjson.com/data/products/2/3.jpg"]
   }];
   
   constructor() { }
@@ -35,6 +43,18 @@ export class ProductsService {
   getAllProductList(): Products[]{
     return this.productList
   }
+
+  getAllImageListByProductId(id: number): string[] {
+    const product = this.getProductById(id);
+    
+    if (product) {
+      return product.images;
+    }
+    
+    return [];
+  }
+  
+  
 
   getProductById(id: number): Products| undefined{
     return this.productList.find(product => product.id === id);

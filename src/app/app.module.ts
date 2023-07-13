@@ -7,20 +7,18 @@ import { TopBarComponent } from './top-bar/top-bar.component';
 import { ProductListingComponent } from './product-listing/product-listing.component';
 import { ProductComponent } from './product/product.component';
 import { ProductListComponent } from './product-list/product-list.component';
+import { ProductDetailsComponent } from './product-details/product-details.component';
+import { CartComponent } from './cart/cart.component';
 
 @NgModule({
   declarations: [
-    AppComponent,
-    TopBarComponent,
     ProductListingComponent,
-    ProductComponent,
-    ProductListComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: []
 })
 export class AppModule { }
